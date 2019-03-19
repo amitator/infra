@@ -1,0 +1,40 @@
+git checkout develop
+git merge feature2
+git reset HEAD .	//Remove files from the staging area
+git push --set-upstream origin feature/CTFA-1721-...
+git push origin --delete feature/CTFA-1721-...feature/CTFA-1721-...
+#git log --grep="JIRA-123"
+#git revert  	//do new revert commits (safe)
+р#git resert HEAD~1 	//delete commits after HEAD~1 (not safe, doesn't save history)
+#git reset /assets/img/misty-and-pepper.jpg  //delete file from commit
+#git rebase -i HEAD~4 	//interactive rebase of 4 commits
+	pick - do nothing
+	squash - merge
+	reword - change comment
+#git show 
+#git show master  	//shows commit where master pointing
+#git show maser^1 	//show where parent of master pointing
+#git show master~2 	//show where grand parent of master pointing
+
+#git diff # 	//changes not in stage
+#git diff --cached # 	//changes in stage
+#git diff branch master # 	//diff between commits
+
+#git log 	//shows current branch commits
+#git log --all	//all branches commit
+#git log -p		//shows delta
+#git log --graph --all 	
+#git log --oneline
+
+#git blame file.ext 	//shows what commits changed each line of file
+
+c:\users\user\.gitconfig
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+	
+#git pull		//git fetch + git merge
+#git pull --rebase	//git fetch + git rebase	
+
+#git reflog		//shows list of all operations

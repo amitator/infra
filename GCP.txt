@@ -1,0 +1,26 @@
+Turn off windows firewall
+
+ssh -i ./testkey test@35.207.75.218
+
+eval `ssh-agent -s`
+ssh-add -L
+ssh-add ./testkey
+ssh -i ./testkey -A test@35.207.75.218
+ssh 10.132.0.2
+ssh -i ./testkey -A -t test@35.207.75.218 ssh 10.132.0.2
+
+sudo pritunl default-password
+
+https://cloud.google.com/sdk/docs/#linux
+
+ssh-keygen -t rsa -f ./appuser -C appuser -P ""
+
+gcloud compute instances create --boot-disk-size=10GB --image=ubuntu-1604-xenial-v20170815a --image-project=ubuntu-os-cloud --machine-type=g1-small --tags puma-server --restart-on-failure --zone=europe-west1-b reddit-app
+gcloud projects list
+gcloud config set project serious-dahlia-234917
+
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+curl -sSL https://get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+rvm requirements
+rvm install 2.4.1
