@@ -1,0 +1,19 @@
+{
+	"builders": [
+		{
+			"type": "googlecompute",
+			"project_id": "serious-dahlia-234917",
+			"image_name": "reddit-base-{{timestamp}}",
+			"source_image": "ubuntu-1604-xenial-v20190306",
+			"zone": "europe-west1-b",
+			"ssh_username": "appuser",
+			"machine_type": "f1-micro"
+		}
+	]
+	"provisioners": [
+		{
+			"type": "shell",
+			"script": "scripts/install_ruby.sh"
+		}
+	]
+}
