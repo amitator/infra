@@ -15,6 +15,7 @@ https://cloud.google.com/sdk/docs/#linux
 
 ssh-keygen -t rsa -f ./appuser -C appuser -P ""
 
+gcloud auth application-default login
 gcloud compute instances create --boot-disk-size=10GB --image=ubuntu-1604-xenial-v20190306 --image-project=ubuntu-os-cloud --machine-type=g1-small --tags puma-server2 --restart-on-failure --zone=europe-west1-b reddit-app2 startup-script=./node_setup.sh
 gcloud projects list
 gcloud config set project serious-dahlia-234917

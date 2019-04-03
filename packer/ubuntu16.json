@@ -9,11 +9,16 @@
 			"ssh_username": "appuser",
 			"machine_type": "f1-micro"
 		}
-	]
+	],
 	"provisioners": [
 		{
 			"type": "shell",
 			"script": "scripts/install_ruby.sh"
+		},
+		{
+			"type": "shell",
+			"script": "scripts/install_mongodb.sh",
+			"execute_command": "sudo {{.Path}}"
 		}
 	]
 }
