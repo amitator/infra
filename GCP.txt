@@ -8,6 +8,7 @@ ssh-add ./testkey
 ssh -i ./testkey -A test@35.207.75.218
 ssh 10.132.0.2
 ssh -i ./testkey -A -t test@35.207.75.218 ssh 10.132.0.2
+ssh-add -l
 
 sudo pritunl default-password
 
