@@ -1,4 +1,3 @@
-git remote set-url origin git@github.com:amitator/infra.git
 git checkout develop
 git merge feature2
 git reset HEAD .	//Remove files from the staging area
